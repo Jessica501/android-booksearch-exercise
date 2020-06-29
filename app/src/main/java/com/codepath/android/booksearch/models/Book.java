@@ -1,17 +1,21 @@
 package com.codepath.android.booksearch.models;
 
+import android.os.Parcelable;
 import android.text.TextUtils;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.parceler.Parcel;
 
 import java.util.ArrayList;
 
-public class Book {
+@Parcel
+public class Book{
     private String openLibraryId;
     private String author;
     private String title;
+
 
     public String getOpenLibraryId() {
         return openLibraryId;
@@ -87,4 +91,5 @@ public class Book {
         }
         return books;
     }
+
 }
